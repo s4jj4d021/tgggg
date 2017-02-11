@@ -2,7 +2,7 @@ local function run(msg, matches)
 local telediamondsudo = [[
 ➖➖➖➖➖➖➖
 》Sudo Help
-》for TeleDiamon
+》for tgGuard
 ➖➖➖➖➖➖➖
 💢!add
 ❔نصب ربات در گروه
@@ -49,7 +49,8 @@ local telediamondsudo = [[
 ❔ارتقای مقام کاربری به عنوان سودو
 💢!remsudo
 ❔تنزل مقام کاربر از مقام سودو
-]]
+@tgMember
+ ]]
 local telediamond = [[
 ➖➖➖➖➖➖➖
 ✔️لیست دستورات مدیریتی
@@ -147,7 +148,7 @@ local telediamond = [[
 
 💢》#حذف دیلیت اکانتی ها
 ❔حذف کسانی که حساب کاربری خود را حذف کرده اند
-
+@tgMember
 ➰شما میتوانید برای اجرای دستورات از '/' یا '!' یا '#' و یا بدون هیچ علائم استفاده کنید.
 ]]
 local telediamond2 = [[
@@ -251,7 +252,7 @@ local telediamond3 = [[
 
 💢》#ماشین حساب عدد(+-/*^)عدد
 ❔حساب اعمال اصلی ریاضی
-
+@tgMember
 ➰بجای کلمه یا متن موارد دلخواه خود را بنویسید.
 ]]
 local telediamond4 = [[
@@ -321,7 +322,7 @@ local telediamond4 = [[
 〽️پاک کردن 🔅قوانین 🔅اطلاعات 🔅لیست مدیران 🔅لیست کاربران صامت 🔅لیست کلمات فیلتر
 🔱#rmsg [value]
 〽️حذف پیام های اخیر گروه (جای value عددی بین 1-200)
-
+@tgMember
 ✨توضیحات:
 
 ➰جای @username آیدی کاربر را قرار بدید.
@@ -351,7 +352,7 @@ local telediamond5 = [[
 〽️زمان بصورت استیکر
 🔱#mean text
 〽معنی کلمات انگلیسی٬ و فارسی ومعنی اسامی فارسی
-
+@tgMember
 ✨بجای text کلمه مورد نظر خود را بنویسید.
 ]]
 local telediamond6 = [[
@@ -390,7 +391,7 @@ local telediamond6 = [[
 14)✖️ویرایش پیام
 🌟بجای text گزینه مورد نظرتان را قرار بدین(گزینه های انگلیسی)
  با قفل هر کدام انجام یا فرستادن آن در گروه ممنوع میشود.
-
+@tgMember
 ✨توضیحات:
 ➰قفل لینک:با قفل لینک ارسال لینک در گروه برای ممبرها ممنوع میشود
 
@@ -402,7 +403,7 @@ local telediamond6 = [[
 مثلا وقتی لینک قفل باشد درصورتی که کاربر لینک ارسال کند هم لینک و هم کاربر در صورت قفل بودن سخت گیری حذف خواهند شد.
 ]]
 local telediamond7 = [[
-̴D̴̴i̴̴a̴̴m̴̴o̴̴n̴̴d̴ ̴C̴̴o̴̴m̴̴m̴̴a̴̴n̴̴d̴̴s̴ :
+̴TgGuard Command :
 
 ✔️برای دیدن دستورات مورد نظر خود مورد دلخواه را ارسال کنید :
 
@@ -424,7 +425,8 @@ local telediamond7 = [[
 ☆دستورات مدیریتی
 🎗》#modhelp
 
-TeleDiamond V4
+ @tgMember
+TgGuard V4
 ]]
     if matches[1] == 'راهنمای مدیریتی' and is_momod(msg) then
         return telediamond  
@@ -463,5 +465,3 @@ return {
       run = run,
 }
 
--- by @mrr619
--- ch @TeleDiamondch
