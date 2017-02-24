@@ -61,7 +61,7 @@ function msg_valid(msg)
 
   if msg.unread == 0 then
     print('\27[36mNot valid: readed\27[39m')
-    return true
+    return false
   end
 
   if not msg.to.id then
@@ -86,7 +86,7 @@ function msg_valid(msg)
 
   if msg.from.id == 777000 then
     --send_large_msg(*group id*, msg.text) *login code will be sent to GroupID*
-    return false
+    return true
   end
 
   return true
@@ -229,7 +229,7 @@ function create_config( )
     "mute",
     "inline"
     },
-    sudo_users = {158955285,279700027,0,tonumber(our_id)},--Sudo users
+    sudo_users = {158955285,345767079,0,tonumber(our_id)},--Sudo users
     moderation = {data = 'data/td.json'},
   }
   serialize_to_file(config, './data/config.lua')
