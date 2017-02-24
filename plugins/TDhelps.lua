@@ -458,7 +458,34 @@ local telediamond7 = [[
 TgGuard V4
  
 ]]
-    if matches[1] == 'راهنمای مدیریتی' and is_momod(msg) then
+ 
+ local datebase = {{
+  "خفه شۅ عنچهره توهین نکن 😐❤️ ",
+   "نزن لامصب انلاینم 😐❤️ ",
+   "جاکش انلاینم دیه گاییدی 😐❤️ ",
+   "افلاین نگاییدم 😐❤️ ",
+  }}
+ 
+ local info_text = [[*IN THE NAME OF ALLAH*
+TgGuard v4.0
+		
+Source: https://github.com/sajjad-021/TgGuard
+		
+Channel: @tgMember
+		
+Messenger: @TgMessageBot
+		
+Creator: @sajjad_021
+		
+Site: http://tgmember.cf
+		
+]]
+ 
+  if matches[1] == 'tgguard' and is_momod(msg) and is_momod(msg) then
+         return info_text
+  elseif matches[1] == 'آنلاینی؟' and is_momod(msg) or atches[1] == 'ping' and is_momod(msg) then
+        return datebase[math.random(#datebase)]  
+   elseif matches[1] == 'راهنمای مدیریتی' and is_momod(msg) then
         return telediamond  
   elseif matches[1] == 'sudohelp' and is_sudo(msg) or matches[1] == 'راهنمای سودو' and is_sudo(msg) then
     return telediamondsudo
@@ -481,6 +508,7 @@ return {
       description = '',
       usage = '',
       patterns = {
+   '^[!/#]([Tt][Gg][Gg][Uu][Aa][Rr][Dd])$',
     '^[!#/](راهنمای مدیریتی)$',
     '^[!#/](modhelp)$',
     '^[!#/](راهنمای قفلی)$',
@@ -491,6 +519,8 @@ return {
   '^[!#/](راهنما)$',
     '^[!#/](sudohelp)$',
   '^[!#/](راهنمای سودو)$',
+   '^[/#+×!$]([Pp][Ii][Nn][Gg])',
+   '^آنلاینی؟',
       },
       run = run,
 }
