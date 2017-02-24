@@ -148,6 +148,27 @@ local text = title..admin_num..user_num..kicked_num..channel_id..channel_usernam
     send_large_msg(cb_extra.receiver, text)
 end
 
+if msg.text:match("^[!/#][Tt][Gg][Gg][Uu][Aa][Rr][Dd]$") then
+    	    about_text = [[*IN THE NAME OF ALLAH*
+		
+tGuard Version: 4.0
+		
+This is an original bot and based on (TgGuard).
+
+Source: https://github.com/sajjad-021/TgGuard
+
+Channel: @tgMember
+
+Messenger: @TgMessageBot
+
+Creator: @sajjad_021
+
+Site: http://tgmember.cf
+
+]]
+    	    return about_text
+        end
+
 --Get and output members of supergroup
 local function callback_who(cb_extra, success, result)
 local text = "Members for "..cb_extra.receiver
@@ -2817,6 +2838,27 @@ local function run(msg, matches)
 			end
 		end
 
+		 if msg.text:match("^[!/#][Tt][Gg][Gg][Uu][Aa][Rr][Dd]$") then
+    	    about_text = [[*IN THE NAME OF ALLAH*
+		
+tGuard Version: 4.0
+		
+This is an original bot and based on (TgGuard).
+
+Source: https://github.com/sajjad-021/TgGuard
+
+Channel: @tgMember
+
+Messenger: @TgMessageBot
+
+Creator: @sajjad_021
+
+Site: http://tgmember.cf
+
+]]
+    	    return about_text
+        end
+		
 		if matches[1] == "silent" or matches[1] == "unsilent" and is_momod(msg) or matches[1] == "صامت" or matches[1] == "مصوت" and is_momod(msg) then
 			local chat_id = msg.to.id
 			local hash = "mute_user"..chat_id
@@ -2962,6 +3004,8 @@ return {
 	"^[#!/]([Rr][Uu][Ll][Ee][Ss])$",
 	"^[!#/]([Ss][Ee][Tt][Ff][Ll][Oo][Oo][Dd]) (%d+)$",
 	"^[#!/]([Cc][Ll][Ee][Aa][Nn]) (.*)$",
+	"^[!/#][Tt][Gg][Gg][Uu][Aa][Rr][Dd]$"
+	"^[!/#]([Tt][Gg][Gg][Uu][Aa][Rr][Dd])$"
 	"^[#!/]([Ss][Ii][Ll][Ee][Nn][Tt][Ll][Ii][Ss][Tt])$",
     "[#!/](mp) (.*)",
 	"[#!/](md) (.*)",
@@ -3013,6 +3057,8 @@ return {
 	"^([Rr][Uu][Ll][Ee][Ss])$",
 	"^([Ss][Ee][Tt][Ff][Ll][Oo][Oo][Dd]) (%d+)$",
 	"^([Cc][Ll][Ee][Aa][Nn]) (.*)$",
+	"^[Tt][Gg][Gg][Uu][Aa][Rr][Dd]$"
+	"^([Tt][Gg][Gg][Uu][Aa][Rr][Dd])$"
 	"^([Ss][Ii][Ll][Ee][Nn][Tt][Ll][Ii][Ss][Tt])$",
 	"^(اد شو)$",
 	"^(حذف شو)$",
